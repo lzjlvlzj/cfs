@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="org.ack.cfs.persist.impl.UserDaoImpl">
+    <insert id="insert">
+    	insert into cfs_user(id,loginname,password)
+		 values (#{id},#{loginName},#{password})
+    </insert>
+    <select id="findPageList" resultType="User" parameterType="org.ack.cfs.common.Page">
+    	select * from cfs_user
+    </select>
+</mapper>
